@@ -215,7 +215,6 @@ class Pop():
         return layer_child1, layer_child2, unit_child1, unit_child2
 
     def del_pop(self, error_rate, population_, ConvUnit):
-        print("delete")
         error = []
         for a in range(len(error_rate)):
             error.append(error_rate[a])
@@ -457,7 +456,6 @@ class Pop():
                                                                                               conv_unit, selection)
                 population, conv_unit = self.cat(population, conv_unit, layer_child1, layer_child2, unit_child1,
                                                  unit_child2)
-
 
             for Chromosome in range(len(population) // 2, len(population)):
                 model = create_model.GANAS(population[Chromosome], conv_unit[Chromosome]).to(device)
